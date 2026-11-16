@@ -1,0 +1,32 @@
+name: Lint reference files
+on:
+  push:
+    paths:
+      - '.github/linter_config.yml'
+      - '.github/requirements.txt'
+      - 'en-US/**.ftl'
+    branches:
+      - main
+  pull_request:
+    paths:
+      - '.github/linter_config.yml'
+      - '.github/requirements.txt'
+      - 'en-US/**.ftl'
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install linter
+        run: pip install -r .github/requirements.txt
+      - name: Lint en-US
+        run: moz-fluent-lint ./en-US --config .github/linter_config.yml

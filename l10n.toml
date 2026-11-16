@@ -1,0 +1,18 @@
+# Project configuration read by Pontoon.
+# Every file translated by the community must be listed under [[paths]].
+
+basepath = "."
+
+locales = [
+  "de",
+  "fr",
+  "it",
+  "ja",
+]
+
+[[paths]]
+    reference = "en-US/send.ftl"
+    l10n = "{locale}/send.ftl"
+[[paths]]
+    reference = "en-US/addon.ftl"
+    l10n = "{locale}/addon.ftl"
