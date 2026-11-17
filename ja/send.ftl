@@ -27,8 +27,6 @@ send-copy-link = リンクをコピー
 send-link-copied = リンクをコピーしました
 # Generic error shown when the server reports a failure we have no copy for.
 send-error-unknown = 問題が発生しました。再度お試しください。
-# Used only by tests: an intentionally empty pattern must fall back to English.
-send-test-empty-pattern = 空のパターンのテスト
 
 ## Upload flow (#1088 batch 1): drop zone, progress, upload steps, errors.
 
