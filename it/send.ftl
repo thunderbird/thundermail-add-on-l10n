@@ -28,8 +28,6 @@ send-copy-link = Copia link
 send-link-copied = Link copiato
 # Generic error shown when the server reports a failure we have no copy for.
 send-error-unknown = Si è verificato un errore. Riprova.
-# Used only by tests: an intentionally empty pattern must fall back to English.
-send-test-empty-pattern = Modello vuoto di test
 
 ## Upload flow (#1088 batch 1): drop zone, progress, upload steps, errors.
 
